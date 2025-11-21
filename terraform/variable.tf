@@ -1,5 +1,5 @@
 variable "vmname" {
-  default = "Deep"
+  default = "Nitin"
   type = string
 }
 
@@ -10,5 +10,5 @@ variable "vmnum" {
 
 variable "rgname" {
   type = string
-  default = "Deep"
+  default = "Nitin"
 }
