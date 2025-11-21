@@ -1,5 +1,5 @@
 ---
-- name: Configuring machines into webserver
+- name: Configuring machines into web server
   hosts: all
   become: true
   tasks:
