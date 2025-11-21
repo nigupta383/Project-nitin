@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "azurerm_virtual_network" "example" {
-  name                = "deep-network"
+  name                = "nitin-network"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
@@ -18,7 +18,7 @@ resource "azurerm_subnet" "example" {
 }
 
 resource "azurerm_public_ip" "example" {
-  name                = "deepIP${count.index}"
+  name                = "nitinIP${count.index}"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
   allocation_method   = "Static"
@@ -29,7 +29,7 @@ resource "azurerm_public_ip" "example" {
 }
 
 resource "azurerm_network_interface" "example" {
-  name                = "deep-nic${count.index}"
+  name                = "nitin-nic${count.index}"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
   count = var.vmnum
@@ -71,7 +71,7 @@ resource "azurerm_linux_virtual_machine" "example" {
 }
 
 resource "azurerm_network_security_group" "example" {
-  name                = "DeepSG1"
+  name                = "nitinSG1"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 
