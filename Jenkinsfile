@@ -33,7 +33,7 @@ pipeline {
           ansiblePlaybook credentialsId: 'ansible', disableHostKeyChecking: true, inventory: 'terraform/inventory', playbook: 'ansible/webserver.yaml', vaultTmpPath: '' 
          }
       }
-      stage('Terraform Plan'){
+      stage('Terraform destroy'){
         steps {
           sh 'terraform destroy -auto-approve'
          }
